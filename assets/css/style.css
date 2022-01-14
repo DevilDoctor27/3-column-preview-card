@@ -151,13 +151,6 @@ body {
   border: 2px solid white;
   background-color: white;
   text-transform: capitalize;
-  -webkit-transition: color 0.2s linear, background-color 0.2s linear;
-  transition: color 0.2s linear, background-color 0.2s linear;
-}
-
-.card__button:hover {
-  background-color: transparent;
-  color: white;
 }
 
 .card__button--sedan {
@@ -179,6 +172,17 @@ body {
   }
   .card__button {
     padding: 0.4rem 1.2rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .card__button {
+    -webkit-transition: color 0.2s linear, background-color 0.2s linear;
+    transition: color 0.2s linear, background-color 0.2s linear;
+  }
+  .card__button:hover {
+    background-color: transparent;
+    color: white;
   }
 }
 
