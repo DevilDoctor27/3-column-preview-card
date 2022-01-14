@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+@import "./reset";
+@import "./vars";
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.section {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+
+  background-color: $clr-white;
+
+  transition: background-color 0.4s ease;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  & > *:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  & > *:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .cards {
+    flex-direction: row;
+
+    & > *:first-child {
+      border-radius: 0.5rem 0 0 0.5rem;
+    }
+
+    & > *:last-child {
+      border-radius: 0 0.5rem 0.5rem 0;
+    }
+  }
+}
+
+@import "./card";
