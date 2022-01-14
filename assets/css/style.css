@@ -88,15 +88,6 @@ body {
   max-width: 315px;
   overflow: hidden;
   position: relative;
-  z-index: 1;
-  transition: transform 0.2s linear, border-radius 0.2s linear, box-shadow 0.2s linear, z-index 0.2s linear;
-}
-
-.card:hover {
-  transform: scale(1.05);
-  border-radius: 0.5rem;
-  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.6);
-  z-index: 5;
 }
 
 .card--sedan {
@@ -175,6 +166,14 @@ body {
 @media (min-width: 60rem) {
   .card {
     max-width: 290px;
+    z-index: 1;
+    transition: transform 0.2s linear, border-radius 0.2s linear, box-shadow 0.2s linear, z-index 0.2s linear;
+  }
+  .card:hover {
+    transform: scale(1.05);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.6);
+    z-index: 5;
   }
   .card__footer {
     padding-top: 2.5rem;
