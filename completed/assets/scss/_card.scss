@@ -2,17 +2,6 @@
   max-width: 315px;
   overflow: hidden;
   position: relative;
-  z-index: 1;
-
-  transition: transform 0.2s linear, border-radius 0.2s linear,
-    box-shadow 0.2s linear, z-index 0.2s linear;
-
-  &:hover {
-    transform: scale(1.05);
-    border-radius: 0.5rem;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.6);
-    z-index: 5;
-  }
 
   &--sedan {
     background-color: $clr-orange;
@@ -58,13 +47,6 @@
     background-color: $clr-white;
     text-transform: capitalize;
 
-    transition: color 0.2s linear, background-color 0.2s linear;
-
-    &:hover {
-      background-color: transparent;
-      color: $clr-white;
-    }
-
     &--sedan {
       color: $clr-orange;
     }
@@ -90,9 +72,33 @@
   }
 }
 
+@media (min-width: 48rem) {
+  .card {
+    &__button {
+      transition: color 0.2s linear, background-color 0.2s linear;
+
+      &:hover {
+        background-color: transparent;
+        color: $clr-white;
+      }
+    }
+  }
+}
+
 @media (min-width: 60rem) {
   .card {
     max-width: 290px;
+    z-index: 1;
+
+    transition: transform 0.2s linear, border-radius 0.2s linear,
+      z-index 0.2s linear;
+
+    &:hover {
+      transform: scale(1.05);
+      border-radius: 0.5rem;
+      z-index: 5;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.6);
+    }
 
     &__footer {
       padding-top: 2.5rem;
